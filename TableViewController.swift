@@ -25,9 +25,16 @@ class TableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    func setup() {
+    private func setup() {
         let fonts = Fonts()
         names = fonts.getFontsNames()
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedFont = names[indexPath.row]
+        
+        performSegue(withIdentifier: "Test Drive", sender: selectedFont)
     }
 
     // MARK: - Table view data source
@@ -52,6 +59,22 @@ class TableViewController: UITableViewController {
         return cell
     }
 
+    
+    
+    
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destVC = segue.destination as? TestDriveViewController,
+            let selectedFont = sender as? String? {
+                destVC.fontName = selectedFont!
+        }
+        
+     }
+    
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -87,14 +110,6 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
