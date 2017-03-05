@@ -10,6 +10,16 @@ import UIKit
 
 class TestDriveViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+    }
+    
+    private func setup() {
+        testDriveLabel.font = UIFont(name: fontName, size: CGFloat(fontSize))
+        self.title = fontName
+    }
+    
     var fontName = String()
     var fontSize = 14 {
         didSet {
@@ -30,8 +40,9 @@ class TestDriveViewController: UIViewController {
     
     @IBAction private func sizeTextFieldChanged(_ sender: UITextField) {
         if let sizeText = sender.text,
-           let sizeValue = Int(sizeText) {
-            fontSize = sizeValue
+           let sizeValue = Int(sizeText),
+           sizeValue > 8 {
+                fontSize = sizeValue
         }
     }
     
@@ -42,15 +53,7 @@ class TestDriveViewController: UIViewController {
         
     }
    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setup()
-    }
-
-    private func setup() {
-        self.title = fontName
-        testDriveLabel.text = "Съешь ещё этих мягких французских булчек, да выпей же чаю"
-    }
+    
     
 
     /*
