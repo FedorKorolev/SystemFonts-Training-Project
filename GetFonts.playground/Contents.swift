@@ -3,15 +3,21 @@
 import UIKit
 
 struct Fonts {
-    private let fontFamilyNames = UIFont.familyNames
+    let families: [String] = UIFont.familyNames
     
-    func getFontsNames() -> [String] {
-        var fontNames = [String]()
+    
+    var names: [[String]] {
         
-        for familyName in fontFamilyNames {
-            fontNames += UIFont.fontNames(forFamilyName: familyName)
+        var names = [[String]]()
+        
+        for name in families {
+            names.append(UIFont.fontNames(forFamilyName: name))
         }
         
-        return fontNames
+        return names
     }
 }
+let fonts = Fonts()
+
+fonts.families
+fonts.names

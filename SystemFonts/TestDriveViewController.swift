@@ -16,7 +16,7 @@ class TestDriveViewController: UIViewController {
     }
     
     private func setup() {
-        testDriveLabel.font = UIFont(name: fontName, size: CGFloat(fontSize))
+        fontSize = 14
         self.title = fontName
     }
     

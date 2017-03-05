@@ -10,12 +10,12 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    var names:[String] = []
+    let fonts = Fonts()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setup()
+//        setup()
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -24,35 +24,31 @@ class TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
-    private func setup() {
-        let fonts = Fonts()
-        names = fonts.getFontsNames()
-        
-    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedFont = names[indexPath.row]
+        let selectedFont = fonts.names[indexPath.section][indexPath.row]
         
         performSegue(withIdentifier: "Test Drive", sender: selectedFont)
     }
 
     // MARK: - Table view data source
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return fonts.families.count
     }
 
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return fonts.names[section].count
+    }
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return fonts.families[section]
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        let fontName = names[indexPath.row]
+        let fontName = fonts.names[indexPath.section][indexPath.row]
         cell.textLabel?.text = fontName
         cell.textLabel?.font = UIFont(name: fontName, size: 14)!
         
