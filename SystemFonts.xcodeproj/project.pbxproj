@@ -60,11 +60,11 @@
 			children = (
 				754D1AA91E6C4EC60084583F /* Main.storyboard */,
 				754D1AB71E6C500C0084583F /* TableViewController.swift */,
-				754D1AA51E6C4EC60084583F /* AppDelegate.swift */,
 				757047741E6C5CA50039269E /* TestDriveViewController.swift */,
 				754D1AB91E6C52AB0084583F /* Fonts.swift */,
 				754D1AAC1E6C4EC60084583F /* Assets.xcassets */,
 				754D1AAE1E6C4EC60084583F /* LaunchScreen.storyboard */,
+				754D1AA51E6C4EC60084583F /* AppDelegate.swift */,
 				754D1AB11E6C4EC60084583F /* Info.plist */,
 			);
 			path = SystemFonts;
