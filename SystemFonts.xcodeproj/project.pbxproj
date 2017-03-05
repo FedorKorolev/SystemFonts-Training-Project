@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		754D1AA61E6C4EC60084583F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754D1AA51E6C4EC60084583F /* AppDelegate.swift */; };
-		754D1AA81E6C4EC60084583F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754D1AA71E6C4EC60084583F /* ViewController.swift */; };
 		754D1AAB1E6C4EC60084583F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 754D1AA91E6C4EC60084583F /* Main.storyboard */; };
 		754D1AAD1E6C4EC60084583F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 754D1AAC1E6C4EC60084583F /* Assets.xcassets */; };
 		754D1AB01E6C4EC60084583F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 754D1AAE1E6C4EC60084583F /* LaunchScreen.storyboard */; };
+		754D1AB81E6C500C0084583F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754D1AB71E6C500C0084583F /* TableViewController.swift */; };
+		754D1ABA1E6C52AB0084583F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754D1AB91E6C52AB0084583F /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		754D1AA21E6C4EC60084583F /* SystemFonts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SystemFonts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		754D1AA51E6C4EC60084583F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		754D1AA71E6C4EC60084583F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		754D1AAA1E6C4EC60084583F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		754D1AAC1E6C4EC60084583F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		754D1AAF1E6C4EC60084583F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		754D1AB11E6C4EC60084583F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		754D1AB71E6C500C0084583F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
+		754D1AB91E6C52AB0084583F /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +56,10 @@
 		754D1AA41E6C4EC60084583F /* SystemFonts */ = {
 			isa = PBXGroup;
 			children = (
+				754D1AB71E6C500C0084583F /* TableViewController.swift */,
 				754D1AA51E6C4EC60084583F /* AppDelegate.swift */,
-				754D1AA71E6C4EC60084583F /* ViewController.swift */,
 				754D1AA91E6C4EC60084583F /* Main.storyboard */,
+				754D1AB91E6C52AB0084583F /* Fonts.swift */,
 				754D1AAC1E6C4EC60084583F /* Assets.xcassets */,
 				754D1AAE1E6C4EC60084583F /* LaunchScreen.storyboard */,
 				754D1AB11E6C4EC60084583F /* Info.plist */,
@@ -136,8 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				754D1AA81E6C4EC60084583F /* ViewController.swift in Sources */,
 				754D1AA61E6C4EC60084583F /* AppDelegate.swift in Sources */,
+				754D1ABA1E6C52AB0084583F /* Fonts.swift in Sources */,
+				754D1AB81E6C500C0084583F /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
